@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ihsan Ali - Computer Systems Engineer, Unity Game Developer, and Deep Learning Researcher. Specializing in computer vision, game development, and AI-driven solutions.">
+    <meta name="keywords" content="Ihsan Ali, Unity Developer, Computer Vision, Deep Learning, Game Development, Pakistan, Software Engineer">
+    <meta name="author" content="Ihsan Ali">
+    <meta property="og:title" content="Ihsan Ali - Computer Systems Engineer & Unity Developer">
+    <meta property="og:description" content="Portfolio of Ihsan Ali - MSc Computer Systems Engineering, Top Rated Plus Freelancer, Unity Game Developer">
+    <meta property="og:type" content="website">
+    <title>Ihsan Ali | Computer Systems Engineer & Unity Developer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0f172a',
+                        secondary: '#1e293b',
+                        accent: '#3b82f6',
+                        'accent-hover': '#2563eb',
+                        'text-primary': '#f8fafc',
+                        'text-secondary': '#94a3b8',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-gradient {
+            background: radial-gradient(ellipse at top, #1e293b 0%, #0f172a 50%, #020617 100%);
+        }
+        
+        .skill-bar {
+            transition: width 1.5s ease-out;
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+        
+        .nav-blur {
+            backdrop-filter: blur(10px);
+            background: rgba(15, 23, 42, 0.8);
+        }
+        
+        .blob {
+            position: absolute;
+            filter: blur(40px);
+            opacity: 0.4;
+            animation: float 10s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -30px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+        
+        .timeline-line {
+            background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+        }
+        
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .profile-glow {
+            box-shadow: 0 0 60px rgba(59, 130, 246, 0.3), 0 0 100px rgba(139, 92, 246, 0.2);
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb;
+        }
+    </style>
+</head>
+<body class="bg-primary text-text-primary font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 nav-blur border-b border-gray-800 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-display font-bold text-2xl gradient-text">IA.</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#about" class="hover:text-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#skills" class="hover:text-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#experience" class="hover:text-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <a href="#projects" class="hover:text-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#education" class="hover:text-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Education</a>
+                        <a href="#contact" class="bg-accent hover:bg-accent-hover text-white px-4 py-2 rounded-full text-sm font-medium transition-all">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-secondary border-b border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:text-accent">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:text-accent">About</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium hover:text-accent">Skills</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium hover:text-accent">Experience</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium hover:text-accent">Projects</a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium hover:text-accent">Education</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-accent">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden pt-16">
+        <!-- Animated Blobs -->
+        <div class="blob bg-blue-500 w-96 h-96 rounded-full top-0 left-0 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="blob bg-purple-500 w-96 h-96 rounded-full bottom-0 right-0 translate-x-1/2 translate-y-1/2 animation-delay-2000"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <div class="inline-block px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 text-accent text-sm font-medium mb-6">
+                        <i class="fas fa-circle text-xs mr-2 animate-pulse"></i>Available for Freelance
+                    </div>
+                    <h1 class="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                        Hi, I'm <span class="gradient-text">Ihsan Ali</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-text-secondary mb-6 font-light typing-cursor" id="typing-text">
+                        Computer Systems Engineer
+                    </h2>
+                    <p class="text-lg text-text-secondary mb-8 max-w-lg leading-relaxed">
+                        MSc Computer Systems Engineering | Top Rated Plus Freelancer | Unity Game Developer | Deep Learning Researcher specializing in Computer Vision and Image Processing.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects" class="bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-full font-medium transition-all transform hover:scale-105 flex items-center gap-2">
+                            View My Work <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="border-2 border-gray-600 hover:border-accent text-text-primary hover:text-accent px-8 py-4 rounded-full font-medium transition-all flex items-center gap-2">
+                            Get In Touch
+                        </a>
+                    </div>
+                    
+                    <div class="mt-12 flex items-center gap-6">
+                        <a href="https://www.linkedin.com/in/ihsan8700/" target="_blank" class="text-2xl text-gray-400 hover:text-accent transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/" target="_blank" class="text-2xl text-gray-400 hover:text-accent transition-colors">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://join.skype.com/invite/XZDGIPPc9xCP" target="_blank" class="text-2xl text-gray-400 hover:text-accent transition-colors">
+                            <i class="fab fa-skype"></i>
+                        </a>
+                        <a href="https://www.upwork.com/freelancers/~018a935a1f5c70a53f" target="_blank" class="text-2xl text-gray-400 hover:text-accent transition-colors">
+                            <i class="fas fa-briefcase"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative flex justify-center lg:justify-end" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="relative w-80 h-80 md:w-96 md:h-96">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-2xl opacity-30 animate-pulse"></div>
+                        <!-- Profile Image - Using your uploaded photo -->
+                        <img src="assets/images/ihsan-profile.jpg" 
+                             alt="Ihsan Ali - Computer Systems Engineer" 
+                             class="relative w-full h-full object-cover rounded-full border-4 border-gray-800 shadow-2xl profile-glow"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80'">
+                        
+                        <!-- Floating badges -->
+                        <div class="absolute -top-4 -right-4 bg-secondary px-4 py-2 rounded-xl shadow-lg border border-gray-700 animate-bounce">
+                            <span class="text-accent font-bold">Top 3%</span>
+                            <span class="text-xs text-gray-400 block">Upwork Freelancer</span>
+                        </div>
+                        
+                        <div class="absolute -bottom-4 -left-4 bg-secondary px-4 py-2 rounded-xl shadow-lg border border-gray-700">
+                            <span class="text-green-400 font-bold">50+</span>
+                            <span class="text-xs text-gray-400 block">Projects Delivered</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-gray-400 hover:text-accent transition-colors">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-secondary relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-up" data-aos-duration="800">
+                    <h2 class="font-display text-4xl font-bold mb-6">About Me</h2>
+                    <div class="w-20 h-1 bg-accent mb-8 rounded-full"></div>
+                    
+                    <div class="space-y-4 text-text-secondary leading-relaxed">
+                        <p>
+                            Motivated computer systems engineer with an MSc in Computer Systems Engineering and hands-on experience in deep learning, computer vision, and image processing. Published research in blind image deblurring (IEEE ECAI 2020).
+                        </p>
+                        <p>
+                            My academic goal is to pursue doctoral research in deep learning for computer vision, with a focus on image and video restoration, data-efficient AI, and real-time visual understanding.
+                        </p>
+                        <p>
+                            As a <strong class="text-text-primary">Top Rated Plus Freelancer</strong> on Upwork (Top 3%), I've successfully delivered 50+ projects for global clients, specializing in Unity game development, simulation games, and AI integration.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 grid grid-cols-2 gap-4">
+                        <div class="bg-primary p-4 rounded-xl border border-gray-800">
+                            <h4 class="font-display font-bold text-accent mb-2">Research Interests</h4>
+                            <ul class="text-sm text-text-secondary space-y-1">
+                                <li>• Computer Vision</li>
+                                <li>• Image & Video Processing</li>
+                                <li>• Deep Learning</li>
+                                <li>• Blind Deblurring</li>
+                            </ul>
+                        </div>
+                        <div class="bg-primary p-4 rounded-xl border border-gray-800">
+                            <h4 class="font-display font-bold text-accent mb-2">Location</h4>
+                            <p class="text-sm text-text-secondary">
+                                Village Tanchkai, PO Kabal<br>
+                                Tehsil & District Swat<br>
+                                Khyber Pakhtunkhwa, Pakistan
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative flex justify-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <!-- Secondary display of your photo in About section -->
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur-2xl opacity-20"></div>
+                        <img src="assets/images/ihsan-profile.jpg" 
+                             alt="Ihsan Ali" 
+                             class="relative w-full max-w-md rounded-2xl border-2 border-gray-800 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-display text-4xl font-bold mb-4">Technical Skills</h2>
+                <p class="text-text-secondary max-w-2xl mx-auto">Expertise spanning game development, machine learning, and software engineering</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Programming -->
+                <div class="bg-secondary p-8 rounded-2xl border border-gray-800 hover:border-accent transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-code text-2xl text-blue-400"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl">Programming</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">C#</span>
+                                <span class="text-sm text-text-secondary">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar bg-blue-500 h-2 rounded-full" style="width: 0%" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Python</span>
+                                <span class="text-sm text-text-secondary">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar bg-yellow-500 h-2 rounded-full" style="width: 0%" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">C++</span>
+                                <span class="text-sm text-text-secondary">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar bg-purple-500 h-2 rounded-full" style="width: 0%" data-width="75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Development -->
+                <div class="bg-secondary p-8 rounded-2xl border border-gray-800 hover:border-accent transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-gamepad text-2xl text-purple-400"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl">Game Development</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Unity 3D</span>
+                                <span class="text-sm text-text-secondary">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar bg-purple-500 h-2 rounded-full" style="width: 0%" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Mobile Optimization</span>
+                                <span class="text-sm text-text-secondary">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar bg-green-500 h-2 rounded-full" style="width: 0%" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Ad Integration</span>
+                                <span class="text-sm text-text-secondary">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar bg-blue-400 h-2 rounded-full" style="width: 0%" data-width="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI & Data -->
+                <div class="bg-secondary p-8 rounded-2xl border border-gray-800 hover:border-accent transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-brain text-2xl text-green-400"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl">AI & Machine Learning</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Deep Learning</span>
+                                <span class="text-sm text-text-secondary">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar bg-green-500 h-2 rounded-full" style="width: 0%" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Computer Vision</span>
+                                <span class="text-sm text-text-secondary">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar bg-blue-500 h-2 rounded-full" style="width: 0%" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">PyTorch</span>
+                                <span class="text-sm text-text-secondary">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar bg-orange-500 h-2 rounded-full" style="width: 0%" data-width="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="bg-secondary p-8 rounded-2xl border border-gray-800 hover:border-accent transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-tools text-2xl text-orange-400"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl">Tools & Software</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-primary rounded-full text-sm border border-gray-700">Git</span>
+                        <span class="px-3 py-1 bg-primary rounded-full text-sm border border-gray-700">Jira</span>
+                        <span class="px-3 py-1 bg-primary rounded-full text-sm border border-gray-700">Confluence</span>
+                        <span class="px-3 py-1 bg-primary rounded-full text-sm border border-gray-700">Bitbucket</span>
+                        <span class="px-3 py-1 bg-primary rounded-full text-sm border border-gray-700">MATLAB</span>
+                        <span class="px-3 py-1 bg-primary rounded-full text-sm border border-gray-700">Adobe Photoshop</span>
+                        <span class="px-3 py-1 bg-primary rounded-full text-sm border border-gray-700">Adobe Illustrator</span>
+                    </div>
+                </div>
+
+                <!-- Mobile -->
+                <div class="bg-secondary p-8 rounded-2xl border border-gray-800 hover:border-accent transition-all duration-300" data-aos="fade-up" data-aos-delay="500">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-mobile-alt text-2xl text-pink-400"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl">Mobile Development</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span class="text-sm">Flutter App Development</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span class="text-sm">iOS Deployment</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span class="text-sm">Android Optimization</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span class="text-sm">In-App Purchases</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="bg-secondary p-8 rounded-2xl border border-gray-800 hover:border-accent transition-all duration-300" data-aos="fade-up" data-aos-delay="600">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-language text-2xl text-yellow-400"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl">Languages</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm">English</span>
+                            <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">C1 Proficient</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm">Urdu</span>
+                            <span class="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">C2 Native</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm">Pashto</span>
+                            <span class="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Native</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 bg-secondary relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-display text-4xl font-bold mb-4">Work Experience</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="relative">
+                <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 timeline-line rounded-full"></div>
+                
+                <!-- Upwork -->
+                <div class="relative mb-12" data-aos="fade-up">
+                    <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-accent rounded-full border-4 border-primary z-10"></div>
+                    <div class="ml-12 md:ml-0 md:grid md:grid-cols-2 md:gap-8 items-center">
+                        <div class="md:text-right">
+                            <div class="bg-primary p-6 rounded-2xl border border-gray-800 hover:border-accent transition-all duration-300 inline-block w-full md:w-auto">
+                                <span class="text-accent text-sm font-medium">March 2020 - Present</span>
+                                <h3 class="font-display font-bold text-xl mt-2">Unity Game Developer</h3>
+                                <p class="text-text-secondary text-sm mb-3">Upwork (Freelance) & Fiverr</p>
+                                <ul class="text-sm text-text-secondary space-y-2 md:text-right">
+                                    <li>• Top Rated Plus (Top 3%) Freelancer</li>
+                                    <li>• 50+ projects delivered globally</li>
+                                    <li>• Simulation & interactive games</li>
+                                    <li>• Ad networks & IAP integration</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="hidden md:block"></div>
+                    </div>
+                </div>
+
+                <!-- Skippy Apps -->
+                <div class="relative mb-12" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-purple-500 rounded-full border-4 border-primary z-10"></div>
+                    <div class="ml-12 md:ml-0 md:grid md:grid-cols-2 md:gap-8 items-center">
+                        <div class="hidden md:block"></div>
+                        <div>
+                            <div class="bg-primary p-6 rounded-2xl border border-gray-800 hover:border-purple-500 transition-all duration-300 inline-block w-full md:w-auto">
+                                <span class="text-purple-400 text-sm font-medium">June 2016 - June 2017</span>
+                                <h3 class="font-display font-bold text-xl mt-2">Junior Unity Developer</h3>
+                                <p class="text-text-secondary text-sm mb-3">Skippy Apps</p>
+                                <ul class="text-sm text-text-secondary space-y-2">
+                                    <li>• Taxi Simulator</li>
+                                    <li>• Bus Simulator</li>
+                                    <li>• Police Car Simulator</li>
+                                    <li>• Farming Simulator</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cybervision -->
+                <div class="relative mb-12" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-green-500 rounded-full border-4 border-primary z-10"></div>
+                    <div class="ml-12 md:ml-0 md:grid md:grid-cols-2 md:gap-8 items-center">
+                        <div class="md:text-right">
+                            <div class="bg-primary p-6 rounded-2xl border border-gray-800 hover:border-green-500 transition-all duration-300 inline-block w-full md:w-auto">
+                                <span class="text-green-400 text-sm font-medium">Feb 2021 - Aug 2021</span>
+                                <h3 class="font-display font-bold text-xl mt-2">Data Science & ML</h3>
+                                <p class="text-text-secondary text-sm mb-3">Cybervision International</p>
+                                <ul class="text-sm text-text-secondary space-y-2 md:text-right">
+                                    <li>• Machine Learning models</li>
+                                    <li>• Flutter App Development</li>
+                                    <li>• AI component deployment</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="hidden md:block"></div>
+                    </div>
+                </div>
+
+                <!-- Ministry -->
+                <div class="relative" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-yellow-500 rounded-full border-4 border-primary z-10"></div>
+                    <div class="ml-12 md:ml-0 md:grid md:grid-cols-2 md:gap-8 items-center">
+                        <div class="hidden md:block"></div>
+                        <div>
+                            <div class="bg-primary p-6 rounded-2xl border border-gray-800 hover:border-yellow-500 transition-all duration-300 inline-block w-full md:w-auto">
+                                <span class="text-yellow-400 text-sm font-medium">May 2021 - Sept 2021</span>
+                                <h3 class="font-display font-bold text-xl mt-2">Creative Writer & Freelancer</h3>
+                                <p class="text-text-secondary text-sm mb-3">Ministry of IT & Telecom, Pakistan</p>
+                                <ul class="text-sm text-text-secondary space-y-2">
+                                    <li>• Technical documentation</li>
+                                    <li>• Content creation</li>
+                                    <li>• Creative writing projects</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-display text-4xl font-bold mb-4">Featured Projects</h2>
+                <p class="text-text-secondary max-w-2xl mx-auto">A selection of my work in game development and research</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-secondary rounded-2xl overflow-hidden border border-gray-800" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop&q=80" 
+                             alt="Blind Image Deblurring" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                             loading="lazy">
+                        <div class="absolute top-4 right-4 bg-blue-500 text-white text-xs px-3 py-1 rounded-full">Research</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl mb-2">Blind Image Deblurring Platform</h3>
+                        <p class="text-text-secondary text-sm mb-4">Google Colab based online platform for rapid estimation of real blur in single-image blind deblurring using deep learning.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-primary px-2 py-1 rounded border border-gray-700">Python</span>
+                            <span class="text-xs bg-primary px-2 py-1 rounded border border-gray-700">PyTorch</span>
+                            <span class="text-xs bg-primary px-2 py-1 rounded border border-gray-700">CNN</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-accent hover:text-accent-hover text-sm font-medium flex items-center gap-1">
+                                View Paper <i class="fas fa-external-link-alt text-xs"></i>
+                            </a>
+                            <span class="text-xs text-gray-500">IEEE ECAI 2020</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-secondary rounded-2xl overflow-hidden border border-gray-800" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop&q=80" 
+                             alt="Taxi Simulator" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                             loading="lazy">
+                        <div class="absolute top-4 right-4 bg-purple-500 text-white text-xs px-3 py-1 rounded-full">Game</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl mb-2">Taxi Simulator</h3>
+                        <p class="text-text-secondary text-sm mb-4">Realistic taxi simulation game with city environment, passenger mechanics, and dynamic traffic system.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-primary px-2 py-1 rounded border border-gray-700">Unity 3D</span>
+                            <span class="text-xs bg-primary px-2 py-1 rounded border border-gray-700">C#</span>
+                            <span class="text-xs bg-primary px-2 py-1 rounded border border-gray-700">Mobile</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-accent hover:text-accent-hover text-sm font-medium flex items-center gap-1">
+                                View Project <i class="fas fa-external-link-alt text-xs"></i>
+                            </a>
+                            <span class="text-xs text-gray-500">Upwork</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-secondary rounded-2xl overflow-hidden border border-gray-800" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1596838833993-615eb9f6a852?w=800&auto=format&fit=crop&q=80" 
+                             alt="Bus Simulator" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                             loading="lazy">
+                        <div class="absolute top-4 right-4 bg-purple-500 text-white text-xs px-3 py-1 rounded-full">Game</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl mb-2">Bus Simulator</h3>
+                        <p class="text-text-secondary text-sm mb-4">Comprehensive bus driving simulation with realistic physics, multiple bus models, and route management.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-primary px-2 py-1 rounded border border-gray-700">Unity 3D</span>
+                            <span class="text-xs bg-primary px-2 py-1 rounded border border-gray-700">Physics</span>
+                            <span class="text-xs bg-primary px-2 py-1 rounded border border-gray-700">iOS/Android</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-accent hover:text-accent-hover text-sm font-medium flex items-center gap-1">
+                                View Project <i class="fas fa-external-link-alt text-xs"></i>
+                            </a>
+                            <span class="text-xs text-gray-500">Skippy Apps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card bg-secondary rounded-2xl overflow-hidden border border-gray-800" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&auto=format&fit=crop&q=80" 
+                             alt="Police Car Simulator" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                             loading="lazy">
+                        <div class="absolute top-4 right-4 bg-purple-500 text-white text-xs px-3 py-1 rounded-full">Game</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl mb-2">Police Car Simulator</h3>
+                        <p class="text-text-secondary text-sm mb-4">High-speed police chase simulation with emergency response mechanics and open world environment.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-primary px-2 py-1 rounded border border-gray-700">Unity 3D</span>
+                            <span class="text-xs bg-primary px-2 py-1 rounded border border-gray-700">C#</span>
+                            <span class="text-xs bg-primary px-2 py-1 rounded border border-gray-700">AI</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-accent hover:text-accent-hover text-sm font-medium flex items-center gap-1">
+                                View Project <i class="fas fa-external-link-alt text-xs"></i>
+                            </a>
+                            <span class="text-xs text-gray-500">Skippy Apps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card bg-secondary rounded-2xl overflow-hidden border border-gray-800" data-aos="fade-up" data-aos-delay="500">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=800&auto=format&fit=crop&q=80" 
+                             alt="Farming Simulator" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                             loading="lazy">
+                        <div class="absolute top-4 right-4 bg-purple-500 text-white text-xs px-3 py-1 rounded-full">Game</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl mb-2">Farming Simulator</h3>
+                        <p class="text-text-secondary text-sm mb-4">Agricultural simulation with crop management, machinery operation, and seasonal cycles.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-primary px-2 py-1 rounded border border-gray-700">Unity 3D</span>
+                            <span class="text-xs bg-primary px-2 py-1 rounded border border-gray-700">Simulation</span>
+                            <span class="text-xs bg-primary px-2 py-1 rounded border border-gray-700">Mobile</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-accent hover:text-accent-hover text-sm font-medium flex items-center gap-1">
+                                View Project <i class="fas fa-external-link-alt text-xs"></i>
+                            </a>
+                            <span class="text-xs text-gray-500">Skippy Apps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card bg-secondary rounded-2xl overflow-hidden border border-gray-800" data-aos="fade-up" data-aos-delay="600">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop&q=80" 
+                             alt="Video Compression" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                             loading="lazy">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white text-xs px-3 py-1 rounded-full">Research</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl mb-2">Video Compression System</h3>
+                        <p class="text-text-secondary text-sm mb-4">Parallel processing video compression using CUDA for enhanced encoding performance over traditional methods.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-primary px-2 py-1 rounded border border-gray-700">C++</span>
+                            <span class="text-xs bg-primary px-2 py-1 rounded border border-gray-700">CUDA</span>
+                            <span class="text-xs bg-primary px-2 py-1 rounded border border-gray-700">Parallel Computing</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-accent hover:text-accent-hover text-sm font-medium flex items-center gap-1">
+                                View Project <i class="fas fa-external-link-alt text-xs"></i>
+                            </a>
+                            <span class="text-xs text-gray-500">FYP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="https://www.upwork.com/freelancers/~018a935a1f5c70a53f" target="_blank" class="inline-flex items-center gap-2 text-accent hover:text-accent-hover font-medium border-b-2 border-accent pb-1 hover:border-accent-hover transition-all">
+                    View All Projects on Upwork <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-24 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-display text-4xl font-bold mb-4">Education</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="space-y-8 max-w-4xl mx-auto">
+                <!-- MSc -->
+                <div class="bg-primary p-8 rounded-2xl border border-gray-800 hover:border-accent transition-all duration-300 flex flex-col md:flex-row gap-6" data-aos="fade-up">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-3xl text-blue-400"></i>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                            <h3 class="font-display font-bold text-xl">MSc Computer Systems Engineering</h3>
+                            <span class="text-accent text-sm font-medium mt-1 md:mt-0">2016 - 2020</span>
+                        </div>
+                        <p class="text-text-secondary mb-2">University of Engineering and Technology, Peshawar</p>
+                        <p class="text-sm text-gray-400 mb-4">Thesis: Blind Image Deblurring using Deep Learning | Published in IEEE ECAI 2020</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-secondary px-3 py-1 rounded-full border border-gray-700">Deep Learning</span>
+                            <span class="text-xs bg-secondary px-3 py-1 rounded-full border border-gray-700">Computer Vision</span>
+                            <span class="text-xs bg-secondary px-3 py-1 rounded-full border border-gray-700">Image Processing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BSc -->
+                <div class="bg-primary p-8 rounded-2xl border border-gray-800 hover:border-accent transition-all duration-300 flex flex-col md:flex-row gap-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-university text-3xl text-purple-400"></i>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                            <h3 class="font-display font-bold text-xl">BSc Computer Systems Engineering</h3>
+                            <span class="text-purple-400 text-sm font-medium mt-1 md:mt-0">2012 - 2016</span>
+                        </div>
+                        <p class="text-text-secondary mb-2">University of Engineering and Technology, Peshawar</p>
+                        <p class="text-sm text-gray-400 mb-4">FYP: Video Compression using Parallel Processing (CUDA)</p>
+                        <div class="flex items-center gap-2 mt-2">
+                            <i class="fas fa-award text-yellow-400"></i>
+                            <span class="text-sm text-yellow-400">ICT Talent-Based Scholarship (Full Expenses Covered)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-primary p-6 rounded-xl border border-gray-800 text-center">
+                        <i class="fas fa-certificate text-3xl text-green-400 mb-3"></i>
+                        <h4 class="font-display font-bold mb-1">Data Science</h4>
+                        <p class="text-xs text-text-secondary">Cybervision International</p>
+                    </div>
+                    <div class="bg-primary p-6 rounded-xl border border-gray-800 text-center">
+                        <i class="fas fa-mobile-alt text-3xl text-pink-400 mb-3"></i>
+                        <h4 class="font-display font-bold mb-1">Flutter Development</h4>
+                        <p class="text-xs text-text-secondary">Cybervision International</p>
+                    </div>
+                    <div class="bg-primary p-6 rounded-xl border border-gray-800 text-center">
+                        <i class="fas fa-pen-nib text-3xl text-yellow-400 mb-3"></i>
+                        <h4 class="font-display font-bold mb-1">Creative Writing</h4>
+                        <p class="text-xs text-text-secondary">Ministry of IT & Telecom</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-primary relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-display text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-text-secondary max-w-2xl mx-auto">Have a project in mind? Let's work together to create something amazing.</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div data-aos="fade-right">
+                    <h3 class="font-display text-2xl font-bold mb-6">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-xl text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1">Email</h4>
+                                <a href="mailto:engrihsanali87@gmail.com" class="text-text-secondary hover:text-accent transition-colors">engrihsanali87@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-whatsapp text-xl text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1">WhatsApp</h4>
+                                <a href="https://wa.me/923439808700" class="text-text-secondary hover:text-accent transition-colors">+92 343 9808700</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-xl text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1">Location</h4>
+                                <p class="text-text-secondary">Swat, Khyber Pakhtunkhwa, Pakistan</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-blue-400/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-skype text-xl text-blue-300"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1">Skype</h4>
+                                <a href="https://join.skype.com/invite/XZDGIPPc9xCP" class="text-text-secondary hover:text-accent transition-colors">Join Skype Call</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10">
+                        <h4 class="font-display font-bold mb-4">Follow Me</h4>
+                        <div class="flex gap-4">
+                            <a href="https://www.linkedin.com/in/ihsan8700/" target="_blank" class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                            <a href="https://www.upwork.com/freelancers/~018a935a1f5c70a53f" target="_blank" class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-green-600 transition-all">
+                                <i class="fas fa-briefcase text-xl"></i>
+                            </a>
+                            <a href="https://github.com/" target="_blank" class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-800 transition-all">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                            <a href="https://join.skype.com/invite/XZDGIPPc9xCP" target="_blank" class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-400 transition-all">
+                                <i class="fab fa-skype text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-secondary p-8 rounded-2xl border border-gray-800" data-aos="fade-left">
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Name</label>
+                                <input type="text" required class="w-full bg-primary border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors" placeholder="Your name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" required class="w-full bg-primary border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors" placeholder="your@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Subject</label>
+                            <input type="text" required class="w-full bg-primary border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors" placeholder="Project inquiry">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Message</label>
+                            <textarea rows="5" required class="w-full bg-primary border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors resize-none" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-accent hover:bg-accent-hover text-white font-medium py-4 rounded-xl transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div id="formMessage" class="hidden mt-4 p-4 rounded-xl text-center"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="font-display font-bold text-2xl gradient-text">IA.</span>
+                    <p class="text-text-secondary text-sm mt-2">Computer Systems Engineer & Unity Developer</p>
+                </div>
+                <div class="flex gap-6 text-sm text-text-secondary">
+                    <a href="#home" class="hover:text-accent transition-colors">Home</a>
+                    <a href="#about" class="hover:text-accent transition-colors">About</a>
+                    <a href="#projects" class="hover:text-accent transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; 2024 Ihsan Ali. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Designed with <i class="fas fa-heart text-red-500 mx-1"></i> in Swat, Pakistan</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-accent hover:bg-accent-hover text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all transform translate-y-20 opacity-0 z-40">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // Skill bars animation
+        const skillBars = document.querySelectorAll('.skill-bar');
+        const animateSkills = () => {
+            skillBars.forEach(bar => {
+                const rect = bar.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    bar.style.width = bar.getAttribute('data-width');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateSkills);
+        window.addEventListener('load', animateSkills);
+
+        // Typing effect
+        const texts = ['Computer Systems Engineer', 'Unity Game Developer', 'Deep Learning Researcher', 'Top Rated Freelancer'];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingElement = document.getElementById('typing-text');
+
+        function type() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                typingElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && charIndex === currentText.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        type();
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.remove('translate-y-20', 'opacity-0');
+            } else {
+                backToTopBtn.classList.add('translate-y-20', 'opacity-0');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Contact Form Handling
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            // Show loading state
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+
+            // Simulate form submission (replace with actual endpoint)
+            setTimeout(() => {
+                formMessage.classList.remove('hidden');
+                formMessage.className = 'mt-4 p-4 rounded-xl text-center bg-green-500/20 text-green-400 border border-green-500/30';
+                formMessage.innerHTML = '<i class="fas fa-check-circle mr-2"></i> Message sent successfully! I\'ll get back to you soon.';
+                
+                contactForm.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+            }, 1500);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
